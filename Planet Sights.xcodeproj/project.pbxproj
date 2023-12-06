@@ -12,6 +12,9 @@
 		06E39C2E2B20795D000702B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E39C2D2B20795D000702B4 /* Assets.xcassets */; };
 		06E39C312B20795D000702B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E39C302B20795D000702B4 /* Preview Assets.xcassets */; };
 		06E39C3A2B20835B000702B4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E39C392B20835B000702B4 /* DataService.swift */; };
+		06E39C3C2B20C34D000702B4 /* PlanetSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E39C3B2B20C34D000702B4 /* PlanetSearch.swift */; };
+		06E39C402B20C3D1000702B4 /* PlanetCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E39C3F2B20C3D1000702B4 /* PlanetCollection.swift */; };
+		06E39C422B20C448000702B4 /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E39C412B20C448000702B4 /* Planets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		06E39C372B207C7B000702B4 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		06E39C382B207DA8000702B4 /* Planet-Sights-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Planet-Sights-Info.plist"; sourceTree = SOURCE_ROOT; };
 		06E39C392B20835B000702B4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		06E39C3B2B20C34D000702B4 /* PlanetSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetSearch.swift; sourceTree = "<group>"; };
+		06E39C3F2B20C3D1000702B4 /* PlanetCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollection.swift; sourceTree = "<group>"; };
+		06E39C412B20C448000702B4 /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		06E39C282B20795C000702B4 /* Planet Sights */ = {
 			isa = PBXGroup;
 			children = (
+				06E39C3E2B20C3B8000702B4 /* Model */,
 				06E39C382B207DA8000702B4 /* Planet-Sights-Info.plist */,
 				06E39C292B20795C000702B4 /* Planet_SightsApp.swift */,
 				06E39C2B2B20795C000702B4 /* ContentView.swift */,
@@ -72,6 +79,16 @@
 				06E39C302B20795D000702B4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		06E39C3E2B20C3B8000702B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06E39C3B2B20C34D000702B4 /* PlanetSearch.swift */,
+				06E39C3F2B20C3D1000702B4 /* PlanetCollection.swift */,
+				06E39C412B20C448000702B4 /* Planets.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +164,9 @@
 				06E39C3A2B20835B000702B4 /* DataService.swift in Sources */,
 				06E39C2C2B20795C000702B4 /* ContentView.swift in Sources */,
 				06E39C2A2B20795C000702B4 /* Planet_SightsApp.swift in Sources */,
+				06E39C402B20C3D1000702B4 /* PlanetCollection.swift in Sources */,
+				06E39C3C2B20C34D000702B4 /* PlanetSearch.swift in Sources */,
+				06E39C422B20C448000702B4 /* Planets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
