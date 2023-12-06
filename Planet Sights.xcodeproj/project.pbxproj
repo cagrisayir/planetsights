@@ -19,6 +19,8 @@
 		06E39C2B2B20795C000702B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		06E39C2D2B20795D000702B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06E39C302B20795D000702B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		06E39C372B207C7B000702B4 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		06E39C382B207DA8000702B4 /* Planet-Sights-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Planet-Sights-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,10 @@
 		06E39C282B20795C000702B4 /* Planet Sights */ = {
 			isa = PBXGroup;
 			children = (
+				06E39C382B207DA8000702B4 /* Planet-Sights-Info.plist */,
 				06E39C292B20795C000702B4 /* Planet_SightsApp.swift */,
 				06E39C2B2B20795C000702B4 /* ContentView.swift */,
+				06E39C372B207C7B000702B4 /* Config.xcconfig */,
 				06E39C2D2B20795D000702B4 /* Assets.xcassets */,
 				06E39C2F2B20795D000702B4 /* Preview Content */,
 			);
@@ -147,6 +151,7 @@
 /* Begin XCBuildConfiguration section */
 		06E39C322B20795D000702B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06E39C372B207C7B000702B4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -210,6 +215,7 @@
 		};
 		06E39C332B20795D000702B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06E39C372B207C7B000702B4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -275,6 +281,7 @@
 				DEVELOPMENT_TEAM = BU7D27M3D7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Planet-Sights-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +311,7 @@
 				DEVELOPMENT_TEAM = BU7D27M3D7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Planet-Sights-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var searching = ""
+    @State var query = ""
     
     var body: some View {
         HStack {
-            TextField("What are you looking for?", text: $searching)
+            TextField("What are you looking for?", text: $query)
                 .textFieldStyle(.roundedBorder)
             
             Button {
-                // TODO: 
+                // TODO:
             } label: {
                 Text("Search")
             }
         }
+        .padding()
+        .onAppear(perform: {
+            print(Bundle.main.infoDictionary?["API_KEY"] as? String)
+        })
     }
 }
 
