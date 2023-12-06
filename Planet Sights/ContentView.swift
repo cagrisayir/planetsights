@@ -29,11 +29,7 @@ struct ContentView: View {
                     }
                     .padding()
                     
-                    List(items, id: \.href) {item in
-                        ForEach(item.data, id: \.nasa_id) { d in
-                            Text(d.title ?? "")
-                        }
-                    }
+                    PhotoGrid(planets: items)
                     
                     
                 }
@@ -41,7 +37,7 @@ struct ContentView: View {
         }
     }
 }
-
-#Preview {
-    ContentView()
-}
+//
+//#Preview {
+//    ContentView()
+//}
