@@ -24,7 +24,7 @@ struct ContentView: View {
         }
         .padding()
         .task {
-            await dataService.planetSearch()
+            let collections = await dataService.planetSearch()
         }
     }
 }
