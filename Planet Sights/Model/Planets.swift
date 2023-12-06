@@ -8,9 +8,9 @@
 import Foundation
 
 struct Planets: Decodable {
-    var href: String?
-    var data: [PlanetData]?
-    var links: [PlanetsLinks]?
+    var href: String
+    var data: [PlanetData]
+    var links: [PlanetsLinks]
 }
 
 struct PlanetData: Decodable {
@@ -26,7 +26,7 @@ struct PlanetData: Decodable {
 }
 
 struct PlanetsLinks: Decodable {
-    var href: String?
+    var href: String
     var rel: String?
     var render: String?
 }

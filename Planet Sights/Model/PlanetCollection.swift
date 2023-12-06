@@ -10,7 +10,7 @@ import Foundation
 struct PlanetCollection: Decodable {
     var version: String?
     var href: String?
-    var items: [Planets]?
+    var items: [Planets] = [Planets]()
     var metadata: PlanetMetadata?
     var links: [PlanetLinks]?
 }

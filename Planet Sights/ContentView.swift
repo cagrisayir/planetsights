@@ -9,26 +9,40 @@ import SwiftUI
 
 struct ContentView: View {
     @State var query = ""
+    @State var items: [Planets] = [Planets]()
     let dataService = DataService()
     
     var body: some View {
-        HStack {
-            TextField("What are you looking for?", text: $query)
-                .textFieldStyle(.roundedBorder)
-            
-            Button {
-                // TODO:
-            } label: {
-                Text("Search")
+        NavigationStack{
+            ZStack{
+                VStack {
+                    HStack {
+                        TextField("What are you looking for?", text: $query)
+                            .textFieldStyle(.roundedBorder)
+                        
+                        Button {
+                            // TODO:
+                        } label: {
+                            Text("Search")
+                        }
+                    }
+                    .padding()
+                    .task {
+                        let collections = await dataService.planetSearch(query: query)
+                        items = collections.items
+                    }
+                    
+                    List(items, id: \.href) {item in
+                        ForEach(item.data, id: \.nasa_id) { d in
+                            Text(d.title ?? "")
+                        }
+                    }
+                }
             }
-        }
-        .padding()
-        .task {
-            let collections = await dataService.planetSearch()
         }
     }
 }
-//
-//#Preview {
-//    ContentView()
-//}
+
+#Preview {
+    ContentView()
+}
