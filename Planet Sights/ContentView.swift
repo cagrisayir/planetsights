@@ -18,25 +18,24 @@ struct ContentView: View {
                 VStack {
                     HStack {
                         TextField("What are you looking for?", text: $query)
-                            .textFieldStyle(.roundedBorder)
-                        
                         Button {
-                            // TODO:
+                            Task {
+                                let collections = await dataService.planetSearch(query: query)
+                                items = collections.items
+                            }
                         } label: {
                             Text("Search")
                         }
                     }
                     .padding()
-                    .task {
-                        let collections = await dataService.planetSearch(query: query)
-                        items = collections.items
-                    }
                     
                     List(items, id: \.href) {item in
                         ForEach(item.data, id: \.nasa_id) { d in
                             Text(d.title ?? "")
                         }
                     }
+                    
+                    
                 }
             }
         }
