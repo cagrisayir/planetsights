@@ -12,15 +12,20 @@ struct PhotoGrid: View {
     var body: some View {
         // planets => data => links[0] => image
         ScrollView {
-            LazyVGrid(columns: [GridItem(), GridItem()], spacing: 0) {
+            LazyVGrid(columns: [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)], spacing: 4) {
                 ForEach(planets, id: \.href) { planet in
                     ForEach(planet.data, id: \.nasa_id) { d in
                         ZStack {
                             AsyncImage(url: URL(string: planet.links[0].href)) { image in
                                 image
+                                    .renderingMode(.original)
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                                    .aspectRatio(1/1, contentMode: .fit)
+                                    .clipped()
+                                    .mask { RoundedRectangle(cornerRadius: 30, style: .continuous) }
+                                
                             } placeholder: {
                                 ProgressView()
                             }

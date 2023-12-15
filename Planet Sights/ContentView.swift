@@ -30,8 +30,6 @@ struct ContentView: View {
                     .padding()
                     
                     PhotoGrid(planets: items)
-                    
-                    
                 }
             }
         }
